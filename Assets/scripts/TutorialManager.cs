@@ -78,14 +78,21 @@ public class TutorialManager : MonoBehaviour
 
         CheckTutorialComplete();
     }
-    void CheckTutorialComplete()
-    {
-        bool walkDone = walkProgress >= walkTriggers.Count;
-        bool teleportDone = teleportProgress >= teleportAreas.Count;
-        if (walkDone && teleportDone)
-        {
-            if (congratsCanvas != null)
-                congratsCanvas.SetActive(true);
-        }
-    }
+   void CheckTutorialComplete()
+   {
+       bool walkDone = walkProgress >= walkTriggers.Count;
+       bool teleportDone = teleportProgress >= teleportAreas.Count;
+
+    if (walkDone && teleportDone)
+      {
+        if (congratsCanvas != null);
+            congratsCanvas.SetActive(true);
+      }
+   }
+
+   public void CloseCongratsCanvas()
+  {
+      if (congratsCanvas != null);
+          congratsCanvas.SetActive(false);
+   }
 }
